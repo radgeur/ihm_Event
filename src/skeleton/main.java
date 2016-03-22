@@ -4,7 +4,7 @@ package skeleton;
 public class main {
 
 	public static void main(String[] args) {
-		new DrawMeSomething();
+		new RGBSelector();
 	}
 	
 }

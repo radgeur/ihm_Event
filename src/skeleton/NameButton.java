@@ -47,8 +47,6 @@ public class NameButton {
 		
 		frame.setVisible(true);
 		frame.pack();
-		
-		new ArdoiseMagique();
 	}
 	
 	private class PrintButtonName implements ActionListener {

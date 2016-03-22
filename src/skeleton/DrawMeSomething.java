@@ -3,6 +3,7 @@ package skeleton;
 import java.awt.Dimension;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 import javax.swing.JFrame;
 
@@ -41,7 +42,20 @@ public class DrawMeSomething {
 			public void mouseExited(MouseEvent e) {}
 			
 		});
-		frame.setContentPane(new ArdoiseMagique());
+		
+		ardoise.addMouseMotionListener(new MouseMotionListener() {
+			
+			@Override
+			public void mouseMoved(MouseEvent e) {
+				System.out.println("move");				
+			}
+			
+			@Override
+			public void mouseDragged(MouseEvent e) {
+				ardoise.addPoint((int)e.getPoint().getX(), (int)e.getPoint().getY());
+			}
+		});
+		frame.setContentPane(ardoise);
 	}
 	
 }
